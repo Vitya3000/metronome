@@ -1,16 +1,16 @@
 //Metronom (Gibt den rhytmus an)
-music.setTempo(400)
+music.setTempo(800);
 let temp=500;
 let play = false;
 let Volume =0;
 basic.forever(function() {
 
-        if(input.buttonIsPressed(Button.B)){
-            temp-=20;
+        if(input.buttonIsPressed(Button.B) && temp>0){
+            temp-=100;
        
     } 
     if (input.buttonIsPressed(Button.A)) {
-        temp += 20;
+        temp += 100;
        
     }
             if(input.soundLevel()<50){
